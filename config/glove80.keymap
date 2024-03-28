@@ -729,12 +729,12 @@ behaviors {
 
         layer_Base {
             bindings = <
-               &kp F1              &kp F2              &kp F3               &kp F4               &kp F5                                                                                                               &kp F6                &kp F7               &kp F8                  &kp F9   &kp F10
-            &kp GRAVE              &kp N1              &kp N2               &kp N3               &kp N4  &kp N5                                                                                 &kp N6                &kp N7                &kp N8               &kp N9                  &kp N0   &kp F11
-            &kp EQUAL               &kp Q               &kp W              &lt 3 E                &kp R   &kp T                                                                                  &kp Y                 &kp U                 &kp I                &kp O                   &kp P   &kp F12
-            &kp MINUS  &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LSHFT F   &kp G                                                                                  &kp H  &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI   &kp SQT
-           &caps_word               &kp Z               &kp X                &kp C              &lt 1 V   &kp B    &kp DEL  &kp PSCRN  &kp C_STOP  &kp PG_UP  &kp HOME                 &kp END   &kp N                 &kp M             &kp COMMA              &kp DOT                &kp FSLH  &kp BSLH
- &magic LAYER_Magic 0               &none          &kp KP_DOT             &kp LBKT             &kp RBKT          &kp SPACE    &kp TAB     &kp ESC  &kp PG_DN   &kp RET  &right_index RALT BSPC                      &kp LEFT              &kp DOWN               &kp UP               &kp RIGHT     &to 4
+               &kp F1              &kp F2              &kp F3               &kp F4               &kp F5                                                                                                 &kp F6                &kp F7               &kp F8                  &kp F9   &kp F10
+            &kp GRAVE              &kp N1              &kp N2               &kp N3               &kp N4  &kp N5                                                                   &kp N6                &kp N7                &kp N8               &kp N9                  &kp N0   &kp F11
+            &kp EQUAL               &kp Q             &lt 1 W              &lt 3 E                &kp R   &kp T                                                                    &kp Y                 &kp U                 &kp I                &kp O                   &kp P   &kp F12
+            &kp MINUS  &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LSHFT F   &kp G                                                                    &kp H  &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI   &kp SQT
+           &caps_word               &kp Z               &kp X                &kp C   &left_index RALT V   &kp B    &kp DEL  &kp PSCRN  &kp C_STOP  &kp PG_UP  &kp HOME   &kp END   &kp N   &right_index RALT M             &kp COMMA              &kp DOT                &kp FSLH  &kp BSLH
+ &magic LAYER_Magic 0               &none          &kp KP_DOT             &kp LBKT             &kp RBKT          &kp SPACE    &kp TAB     &kp ESC  &kp PG_DN   &kp RET  &kp BSPC                      &kp LEFT              &kp DOWN               &kp UP               &kp RIGHT     &to 4
             >;
         };
 
@@ -774,7 +774,7 @@ behaviors {
         layer_Gaming {
             bindings = <
  &trans     &trans  &trans  &trans    &trans                                                                  &trans  &trans  &trans  &trans  &trans
-  &none  &kp GRAVE  &kp N1  &kp N2    &kp N3  &kp N4                                                  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans     &trans  &trans  &trans    &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
   &kp T  &kp LCTRL   &kp Q   &kp W     &kp E   &kp R                                                  &trans  &trans  &trans  &trans  &trans  &trans
   &kp G  &kp LSHFT   &kp A   &kp S     &kp D   &kp F                                                  &trans  &trans  &trans  &trans  &trans  &trans
   &kp B      &none   &kp Z   &kp X     &kp C   &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
