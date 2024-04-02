@@ -734,7 +734,7 @@ behaviors {
             &kp EQUAL               &kp Q             &lt 1 W              &lt 3 E                &kp R   &kp T                                                                    &kp Y                 &kp U                 &kp I                &kp O                   &kp P   &kp F12
             &kp MINUS  &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LSHFT F   &kp G                                                                    &kp H  &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI   &kp SQT
            &caps_word               &kp Z               &kp X                &kp C   &left_index RALT V   &kp B    &kp DEL  &kp PSCRN  &kp C_STOP  &kp PG_UP  &kp HOME   &kp END   &kp N   &right_index RALT M             &kp COMMA              &kp DOT                &kp FSLH  &kp BSLH
- &magic LAYER_Magic 0               &none          &kp KP_DOT             &kp LBKT             &kp RBKT          &kp SPACE    &kp TAB     &kp ESC  &kp PG_DN   &kp RET  &kp BSPC                      &kp LEFT              &kp DOWN               &kp UP               &kp RIGHT     &to 4
+ &magic LAYER_Magic 0       &kp LS(MINUS)          &kp KP_DOT             &kp LBKT             &kp RBKT          &kp SPACE    &kp TAB     &kp ESC  &kp PG_DN   &kp RET  &kp BSPC                      &kp LEFT              &kp DOWN               &kp UP               &kp RIGHT     &to 4
             >;
         };
 
@@ -751,23 +751,23 @@ behaviors {
 
         layer_Magic {
             bindings = <
-  &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
-       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
- &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
+  &bt BT_CLR            &none            &none            &none            &none                                                                                        &none       &none         &none        &none  &bt BT_CLR_ALL
+       &none            &none            &none            &none            &none            &none                                                         &none         &none       &none         &none        &none           &none
+       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none  &kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP        &none           &none
+ &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none    &kp C_MUTE    &kp C_PP    &kp C_STOP  &kp C_EJECT     &bootloader
+  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none  &kp C_VOL_DN  &kp C_PREV  &kp C_BRI_DN        &none      &sys_reset
+       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none                 &none       &none         &none        &none           &none
             >;
         };
 
         layer_Nav {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                           &kp C_PREV   &kp C_PP        &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP
- &trans  &trans  &trans  &trans  &trans  &trans                                                    &kp C_STOP          &none  &kp PG_UP             &none         &none    &kp C_MUTE
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(HOME)   &kp LC(LEFT)     &kp UP     &kp LC(RIGHT)   &kp LC(END)         &none
- &trans  &trans  &trans  &trans  &trans  &trans                                                      &kp HOME       &kp LEFT   &kp DOWN         &kp RIGHT       &kp END         &none
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &none  &kp C_AC_BACK  &kp PG_DN  &kp C_AC_FORWARD         &none         &none
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                        &none      &none             &none         &none        &trans
+ &trans  &trans  &trans  &trans  &trans                                                                                &none      &none             &none        &none   &none
+ &trans  &trans  &trans  &trans  &trans  &trans                                                         &none          &none  &kp PG_UP             &none        &none   &none
+ &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(HOME)   &kp LC(LEFT)     &kp UP     &kp LC(RIGHT)  &kp LC(END)   &none
+ &trans  &trans  &trans  &trans  &trans  &trans                                                      &kp HOME       &kp LEFT   &kp DOWN         &kp RIGHT      &kp END   &none
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &none  &kp C_AC_BACK  &kp PG_DN  &kp C_AC_FORWARD        &none   &none
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                        &none      &none             &none        &none  &trans
             >;
         };
 
