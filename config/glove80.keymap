@@ -773,12 +773,12 @@ behaviors {
 
         layer_Gaming {
             bindings = <
- &trans     &trans  &trans  &trans    &trans                                                                  &trans  &trans  &trans  &trans  &trans
- &trans     &trans  &trans  &trans    &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-  &kp T  &kp LCTRL   &kp Q   &kp W     &kp E   &kp R                                                  &trans  &trans  &trans  &trans  &trans  &trans
-  &kp G  &kp LSHFT   &kp A   &kp S     &kp D   &kp F                                                  &trans  &trans  &trans  &trans  &trans  &trans
-  &kp B      &none   &kp Z   &kp X     &kp C   &kp V  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans      &to 0   &none   &none  &kp LALT          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+  &to 0     &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
+ &trans     &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+  &kp T    &kp TAB   &kp Q   &kp W   &kp E   &kp R                                                    &trans  &trans  &trans  &trans  &trans  &trans
+  &kp G    &kp ESC   &kp A   &kp S   &kp D   &kp F                                                    &trans  &trans  &trans  &trans  &trans  &trans
+  &kp B  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &kp LCTRL   &none   &none   &none          &trans  &kp LALT  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
