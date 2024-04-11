@@ -24,9 +24,7 @@
 #define LAYER_Base 0
 #define LAYER_Gaming 1
 #define LAYER_Lower 2
-#define LAYER_Numeric 3
-#define LAYER_Nav 4
-#define LAYER_Magic 5
+#define LAYER_Magic 3
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -734,7 +732,7 @@ behaviors {
                &kp F1    &kp N1    &kp N2   &kp N3   &kp N4  &kp N5                                                                  &kp N6   &kp N7     &kp N8     &kp N9     &kp N0        &kp F12
             &kp GRAVE     &kp Q     &kp W    &kp E    &kp R   &kp T                                                                   &kp Y    &kp U      &kp I      &kp O      &kp P       &kp BSLH
                &lower     &kp A     &kp S    &kp D    &kp F   &kp G                                                                   &kp H    &kp J      &kp K      &kp L   &kp SEMI        &kp SQT
-                &to 0     &kp Z     &kp X    &kp C    &kp V   &kp B  &kp LCTRL   &kp LALT   &kp INS   &kp DEL   &kp LALT  &kp LCTRL   &kp N    &kp M  &kp COMMA    &kp DOT   &kp FSLH  &kp LS(MINUS)
+                &to 1     &kp Z     &kp X    &kp C    &kp V   &kp B  &kp LCTRL   &kp LALT   &kp INS   &kp DEL   &kp LALT  &kp LCTRL   &kp N    &kp M  &kp COMMA    &kp DOT   &kp FSLH  &kp LS(MINUS)
  &magic LAYER_Magic 0  &kp LBKT  &kp RBKT  &kp TAB  &kp ESC          &kp SPACE  &kp LSHFT  &kp LGUI  &kp RGUI  &kp LSHFT   &kp RALT          &kp RET   &kp BSPC  &kp MINUS  &kp EQUAL     &kp C_STOP
             >;
         };
@@ -758,28 +756,6 @@ behaviors {
   &to 0  &kp LC(LEFT)      &kp LEFT    &kp DOWN     &kp RIGHT  &kp RC(RIGHT)                                                   &kp KP_PLUS   &kp KP_N4   &kp KP_N5   &kp KP_N6  &kp KP_MULTIPLY      &kp LS(PSCRN)
  &trans        &trans      &kp BSPC   &kp PG_DN       &kp RET         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MINUS   &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_SLASH  &kp LS(LC(PSCRN))
  &trans        &trans        &trans      &trans        &trans                 &trans  &trans  &trans  &trans  &trans  &trans                 &kp KP_N0   &kp COMMA     &kp DOT       &kp KP_DOT          &kp K_APP
-            >;
-        };
-
-        layer_Numeric {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                &kp KP_NUM   &kp SLCK  &kp PAUSE_BREAK            &none    &kp K_CALC
- &trans  &trans  &trans  &trans  &trans  &trans                                                                 &none       &none      &none            &none            &none         &none
- &trans  &trans  &trans  &trans  &trans  &trans                                                                 &none   &kp KP_N7  &kp KP_N8        &kp KP_N9            &none         &none
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &kp KP_PLUS   &kp KP_N4  &kp KP_N5        &kp KP_N6  &kp KP_MULTIPLY  &kp KP_ENTER
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &to 0   &trans    &kp CAPS     &trans  &kp KP_MINUS   &kp KP_N1  &kp KP_N2        &kp KP_N3     &kp KP_SLASH         &none
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &kp INS  &caps_word  &kp K_APP                 &kp KP_N0  &kp KP_N0       &kp KP_DOT            &none         &none
-            >;
-        };
-
-        layer_Nav {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                     &none      &none          &none          &none   &none
- &trans  &trans  &trans  &trans  &trans  &trans                                                                 &none       &none  &kp PG_UP          &none          &none   &none
- &trans  &trans  &trans  &trans  &trans  &trans                                                          &kp LC(HOME)    &kp HOME     &kp UP        &kp END    &kp LC(END)   &none
- &trans  &trans  &trans  &trans  &trans  &trans                                                          &kp LC(LEFT)    &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(RIGHT)   &none
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &to 0   &trans    &kp CAPS     &trans         &none  &kp K_BACK  &kp PG_DN  &kp K_FORWARD          &none   &none
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &kp INS  &caps_word  &kp K_APP                     &none      &none          &none          &none   &none
             >;
         };
 
