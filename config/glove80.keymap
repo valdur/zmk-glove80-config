@@ -24,8 +24,8 @@
 #define LAYER_Base 0
 #define LAYER_Gaming 1
 #define LAYER_Lower 2
-#define LAYER_Magic 3
-#define LAYER_Numeric 4
+#define LAYER_Numeric 3
+#define LAYER_Magic 4
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -731,32 +731,43 @@ behaviors {
             bindings = <
                &kp F2    &kp F3    &kp F4   &kp F5   &kp F6                                                                                     &kp F7     &kp F8     &kp F9    &kp F10        &kp F11
                &kp F1    &kp N1    &kp N2   &kp N3   &kp N4  &kp N5                                                                    &kp N6   &kp N7     &kp N8     &kp N9     &kp N0        &kp F12
-            &kp GRAVE     &kp Q     &kp W    &kp E    &kp R   &kp T                                                                     &kp Y    &kp U      &kp I      &kp O      &kp P       &kp BSLH
+                &to 3     &kp Q     &kp W    &kp E    &kp R   &kp T                                                                     &kp Y    &kp U      &kp I      &kp O      &kp P       &kp BSLH
                 &to 2     &kp A     &kp S    &kp D    &kp F   &kp G                                                                     &kp H    &kp J      &kp K      &kp L   &kp SEMI        &kp SQT
                 &to 1     &kp Z     &kp X    &kp C    &kp V   &kp B  &kp LCTRL   &kp LALT  &kp C_STOP   &kp DEL   &kp LALT  &kp LCTRL   &kp N    &kp M  &kp COMMA    &kp DOT   &kp FSLH  &kp LS(MINUS)
- &magic LAYER_Magic 0  &kp LBKT  &kp RBKT  &kp TAB  &kp ESC          &kp SPACE  &kp LSHFT    &kp LGUI  &kp RGUI  &kp LSHFT   &kp RALT          &kp RET   &kp BSPC  &kp MINUS  &kp EQUAL          &to 4
+ &magic LAYER_Magic 0  &kp LBKT  &kp RBKT  &kp TAB  &kp ESC          &kp SPACE  &kp LSHFT    &kp LGUI  &kp RGUI  &kp LSHFT   &kp RALT          &kp RET   &kp BSPC  &kp MINUS  &kp EQUAL      &kp GRAVE
             >;
         };
 
         layer_Gaming {
             bindings = <
- &trans    &trans   &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans
- &trans    &trans   &trans  &trans  &trans  &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &kp T    &kp Q   &kp W   &kp E   &kp R                                                   &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &kp G    &kp A   &kp S   &kp D   &kp F                                                   &trans  &trans  &trans  &trans  &trans  &trans
-  &to 0     &kp B    &kp Z   &kp X   &kp C   &kp V  &trans  &trans  &kp DEL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp BSPC  &kp RET  &trans  &trans          &trans  &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans   &trans    &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans
+ &trans   &trans    &trans  &trans  &trans  &trans                                                   &trans  &trans  &trans  &trans  &trans  &trans
+ &trans    &kp T     &kp Q   &kp W   &kp E   &kp R                                                   &trans  &trans  &trans  &trans  &trans  &trans
+ &trans    &kp G     &kp A   &kp S   &kp D   &kp F                                                   &trans  &trans  &trans  &trans  &trans  &trans
+  &to 0    &kp B     &kp Z   &kp X   &kp C   &kp V  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &kp DEL  &kp BSPC  &trans  &trans          &trans  &trans  &kp RET  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_Lower {
             bindings = <
- &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP                                                                                    &kp C_PREV   &kp C_PP     &kp C_NEXT    &kp C_EJECT          &kp PSCRN
-     &kp CAPS         &none         &none   &kp PG_UP         &none       &kp SLCK                                                  &kp PAUSE_BREAK         &none  &kp PG_UP          &none          &none      &kp LC(PSCRN)
-   &caps_word  &kp LC(HOME)      &kp HOME      &kp UP       &kp END    &kp LC(END)                                                     &kp LC(HOME)      &kp HOME     &kp UP        &kp END    &kp LC(END)      &kp LA(PSCRN)
-        &to 0  &kp LC(LEFT)      &kp LEFT    &kp DOWN     &kp RIGHT  &kp RC(RIGHT)                                                     &kp LC(LEFT)      &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(RIGHT)      &kp LS(PSCRN)
-       &trans         &none      &kp BSPC   &kp PG_DN       &kp RET          &none  &trans  &trans  &trans  &trans  &trans  &trans            &none  &kp LA(LEFT)  &kp PG_DN  &kp LA(RIGHT)          &none  &kp LS(LC(PSCRN))
-       &trans       &kp INS   &kp LS(INS)      &trans        &trans                 &trans  &trans  &trans  &trans  &trans  &trans                         &trans     &trans          &none      &kp K_APP             &trans
+ &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP                                                                                 &kp C_PREV   &kp C_PP     &kp C_NEXT    &kp C_EJECT   &none
+        &none         &none         &none   &kp PG_UP         &none          &none                                                         &none         &none  &kp PG_UP          &none          &none   &none
+       &trans  &kp LC(HOME)      &kp HOME      &kp UP       &kp END    &kp LC(END)                                                  &kp LC(HOME)      &kp HOME     &kp UP        &kp END    &kp LC(END)   &none
+        &to 0  &kp LC(LEFT)      &kp LEFT    &kp DOWN     &kp RIGHT  &kp RC(RIGHT)                                                  &kp LC(LEFT)      &kp LEFT   &kp DOWN      &kp RIGHT  &kp LC(RIGHT)   &none
+       &trans       &kp DEL      &kp BSPC   &kp PG_DN       &kp RET          &none  &trans  &trans  &trans  &trans  &trans  &trans         &none  &kp LA(LEFT)  &kp PG_DN  &kp LA(RIGHT)          &none   &none
+       &trans       &kp INS   &kp LS(INS)      &trans        &trans                 &trans  &trans  &trans  &trans  &trans  &trans                      &trans     &trans      &kp K_APP     &caps_word   &none
+            >;
+        };
+
+        layer_Numeric {
+            bindings = <
+ &kp PAUSE_BREAK            &none    &kp CAPS  &kp KP_NUM   &kp SLCK                                                                              &kp PSCRN  &kp LC(PSCRN)  &kp LA(PSCRN)    &kp LS(PSCRN)  &kp LC(LS(PSCRN))
+           &none            &none   &kp KP_N7   &kp KP_N8  &kp KP_N9         &none                                                         &none  &kp KP_N7      &kp KP_N8      &kp KP_N9            &none              &none
+           &to 0            &none   &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_ENTER                                                  &kp KP_ENTER  &kp KP_N4      &kp KP_N5      &kp KP_N6            &none              &none
+          &trans  &kp KP_MULTIPLY   &kp KP_N1   &kp KP_N2  &kp KP_N3   &kp KP_PLUS                                                   &kp KP_PLUS  &kp KP_N1      &kp KP_N2      &kp KP_N3  &kp KP_MULTIPLY              &none
+          &trans     &kp KP_SLASH   &kp KP_N0   &kp COMMA    &kp DOT  &kp KP_MINUS  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MINUS  &kp KP_N0         &trans         &trans     &kp KP_SLASH              &none
+          &trans            &none  &kp KP_DOT      &trans     &trans                &trans  &trans  &trans  &trans  &trans  &trans                   &trans         &trans     &kp KP_DOT            &none      &kp C_AL_CALC
             >;
         };
 
@@ -768,17 +779,6 @@ behaviors {
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
   &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
-            >;
-        };
-
-        layer_Numeric {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                           &trans      &trans     &trans           &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &none      &none  &kp KP_NUM      &none           &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp KP_ENTER  &kp KP_N7   &kp KP_N8  &kp KP_N9           &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                   &kp KP_PLUS  &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MINUS  &kp KP_N1   &kp KP_N2  &kp KP_N3     &kp KP_SLASH  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                &kp KP_N0   &kp COMMA    &kp DOT       &kp KP_DOT   &to 0
             >;
         };
 
