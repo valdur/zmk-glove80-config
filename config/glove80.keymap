@@ -738,7 +738,7 @@ behaviors {
             
             bindings
                 = <&to 0>
-                , <&rgb_ug RGB_EFS(0)>;
+                , <&rgb_ug RGB_EFS_CMD 0>;
         };
     to_and_efs_1: to_and_efs_1 {
             label = "&TO_AND_EFS_1";
@@ -748,7 +748,7 @@ behaviors {
             
             bindings
                 = <&to 1>
-                , <&rgb_ug RGB_EFS(1)>;
+                , <&rgb_ug RGB_EFS_CMD 1>;
         };
     to_and_efs_2: to_and_efs_2 {
             label = "&TO_AND_EFS_2";
@@ -758,7 +758,7 @@ behaviors {
             
             bindings
                 = <&to 2>
-                , <&rgb_ug RGB_EFS(2)>;
+                , <&rgb_ug RGB_EFS_CMD 2>;
         };
     to_and_efs_3: to_and_efs_3 {
             label = "&TO_AND_EFS_3";
@@ -768,7 +768,7 @@ behaviors {
             
             bindings
                 = <&to 3>
-                , <&rgb_ug RGB_EFS(3)>;
+                , <&rgb_ug RGB_EFS_CMD 3>;
         };
     };
 };
