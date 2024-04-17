@@ -739,6 +739,7 @@ behaviors {
             bindings
                 = <&macro_param_1to1>
                 , <&to 0>
+                , <&macro_param_1to2>
                 , <&rgb_ug RGB_EFS 0>;
         };
     };
