@@ -712,15 +712,16 @@ behaviors {
         bindings = <&kp>, <&kp>;
     };
 
-       dual_layer_trick: dual_layer_trick {
+    dual_layer_trick: dual_layer_trick {
         compatible = "zmk,behavior-hold-tap";
         retro-tap;
         //hold-while-undecided;
+        hold-while-undecided;
         label = "DUAL_LAYER_TRICK";
         bindings = <&mo>, <&to>;
         #binding-cells = <2>;
         tapping-term-ms = <200>;
-        };
+    };
 
 };
 };
