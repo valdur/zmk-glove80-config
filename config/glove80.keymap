@@ -712,7 +712,14 @@ behaviors {
         bindings = <&kp>, <&kp>;
     };
 
-
+       dual_layer_trick: dual_layer_trick {
+            compatible = "zmk,behavior-hold-tap";
+            retro-tap;
+            hold-while-undecided;
+            label = "DUAL_LAYER_TRICK";
+            bindings = <&mo>, <&to>;
+            #binding-cells = <2>;
+        };
 
 };
 };
@@ -741,12 +748,12 @@ behaviors {
 
         layer_Base {
             bindings = <
-               &kp F2    &kp F3  &kp F4   &kp F5   &kp F6                                                                                     &kp F7     &kp F8    &kp F9    &kp F10     &kp F11
-               &kp F1    &kp N1  &kp N2   &kp N3   &kp N4  &kp N5                                                                    &kp N6   &kp N7     &kp N8    &kp N9     &kp N0     &kp F12
-                &to 3     &kp Q   &kp W    &kp E    &kp R   &kp T                                                                     &kp Y    &kp U      &kp I     &kp O      &kp P   &kp GRAVE
-                &to 2     &kp A   &kp S    &kp D    &kp F   &kp G                                                                     &kp H    &kp J      &kp K     &kp L   &kp SEMI     &kp SQT
-                &to 1     &kp Z   &kp X    &kp C    &kp V   &kp B  &kp LCTRL   &kp LALT   &kp DEL  &kp C_STOP   &kp LALT  &kp LCTRL   &kp N    &kp M  &kp COMMA   &kp DOT   &kp FSLH   &kp K_APP
- &magic LAYER_Magic 0  &kp DOWN  &kp UP  &kp TAB  &kp ESC          &kp SPACE  &kp LSHFT  &kp LGUI    &kp RGUI  &kp LSHFT      &mo 5          &kp RET   &kp BSPC  &kp LEFT  &kp RIGHT  &caps_word
+                &kp F2    &kp F3  &kp F4   &kp F5   &kp F6                                                                                     &kp F7     &kp F8    &kp F9    &kp F10     &kp F11
+                &kp F1    &kp N1  &kp N2   &kp N3   &kp N4  &kp N5                                                                    &kp N6   &kp N7     &kp N8    &kp N9     &kp N0     &kp F12
+                 &to 3     &kp Q   &kp W    &kp E    &kp R   &kp T                                                                     &kp Y    &kp U      &kp I     &kp O      &kp P   &kp GRAVE
+ &dual_layer_trick 2 2     &kp A   &kp S    &kp D    &kp F   &kp G                                                                     &kp H    &kp J      &kp K     &kp L   &kp SEMI     &kp SQT
+                 &to 1     &kp Z   &kp X    &kp C    &kp V   &kp B  &kp LCTRL   &kp LALT   &kp DEL  &kp C_STOP   &kp LALT  &kp LCTRL   &kp N    &kp M  &kp COMMA   &kp DOT   &kp FSLH   &kp K_APP
+  &magic LAYER_Magic 0  &kp DOWN  &kp UP  &kp TAB  &kp ESC          &kp SPACE  &kp LSHFT  &kp LGUI    &kp RGUI  &kp LSHFT      &mo 5          &kp RET   &kp BSPC  &kp LEFT  &kp RIGHT  &caps_word
             >;
         };
 
