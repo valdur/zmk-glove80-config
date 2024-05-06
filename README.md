@@ -3,8 +3,8 @@
 To compile modied firmware I did this:
 * fork this repo on github https://github.com/moergo-sc/zmk
 * and this repo https://github.com/moergo-sc/glove80-zmk-config (actually use it as template)
-* in config repository there is a build.yml file, and you need to change it to your forked zmk repo
-* I used github codespaces via visual studio code to edit both repos - it's quite handy
+* in config repository there is a build.yml file, and you need to change it to your forked zmk repo. See this commit: https://github.com/valdur/zmk-glove80-config/commit/5f07dc8fae5c4554d0b79a8a0c7305159996092a
+* I used github codespaces via visual studio code to edit both repos - it's quite handy (originally, after a while I just downloaded the repos and work on them locally)
 * for the layout I still use the web configurator tool - I download "ZMK keymap" (instead of pressing "Build Firmware") and copy paste it's content to zmk-glove80-config/config/glove80.keymap
 * after making changes in either repo I build firmware through github actions (https://github.com/valdur/zmk-glove80-config/actions/workflows/build.yml - in your own repo you'll be able to run, not only view)
 
