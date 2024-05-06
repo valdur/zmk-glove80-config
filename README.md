@@ -1,3 +1,38 @@
+# How to set up dev environment?
+
+To compile modied firmware I did this:
+* fork this repo on github https://github.com/moergo-sc/zmk
+* and this repo https://github.com/moergo-sc/glove80-zmk-config (actually use it as template)
+* in config repository there is a build.yml file, and you need to change it to your forked zmk repo (see screenshot)
+* I used github codespaces via visual studio code to edit both repos - it's quite handy
+* for the layout I still use the web configurator tool - I download "ZMK keymap" (instead of pressing "Build Firmware") and copy paste it's content to zmk-glove80-config/config/glove80.keymap
+* after making changes in either repo I build firmware through github actions (https://github.com/valdur/zmk-glove80-config/actions/workflows/build.yml - in your own repo you'll be able to run, not only view)
+
+
+# Good to know:
+
+* If you want to see what changed compared to MoErgo repo, have a look here: https://github.com/moergo-sc/zmk/compare/main...valdur:zmk-glove80:main
+* This file contains the led map https://github.com/moergo-sc/zmk/blob/main/app/boards/arm/glove80/glove80_lh.dts It's  different than key order
+* There is this constant in app/boards/arm/glove80/glove80_lh_defconfig
+```
+# DO NOT CHANGE CONFIG_ZMK_RGB_UNDERGLOW_BRT_MAX TO ABOVE 80. Configuring
+# BRT_MAX above 80% will draw additional current and can potentially damage your
+# computer. WARRANTY IS VOID IF BRT_MAX SET ABOVE 80.
+CONFIG_ZMK_RGB_UNDERGLOW_BRT_MAX=80
+```
+which means that r, b and g values assigned to pixels array like this pixels[idx] = something;  should not exceed 80. Using HEXRGB macro is safe, writing (struct led_rgb){r : 255, g : 255, b : 255}; may or may not be fun 
+
+* Per layer RGB patterns are implemented as fifth underglow effect, so you can toggle and have rainbow, swirl, breathe, single color or whatever they're called, and then there are per layer patterns.
+* some code was added to send layer info through bluetooth from central to peripheral - I basically looked at each place where this was defined:
+```
+#if IS_ENABLED(CONFIG_ZMK_SPLIT_PERIPHERAL_HID_INDICATORS)
+```
+and added layer sync stuff there as well.
+
+* An attempt was made to have a couple of underglew (ug) effects and a macro to swich layer and ug effect type at the same time, but in the end it turned out that if a behaviour (like rgb ug command) is fired in a macro it doesn't go through the code path that replicates behaviours on the peripheral, just locally
+
+Original documentation below:
+
 # MoErgo Glove80 Custom Configuration for ZMK
 
 ![MoErgo Logo](moergo_logo.png)
