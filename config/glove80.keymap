@@ -328,7 +328,7 @@ behaviors {
   &to 0    &kp T     &kp Q   &kp W   &kp E   &kp R                                                   &trans  &trans  &trans  &trans  &trans  &trans
   &to 0    &kp G     &kp A   &kp S   &kp D   &kp F                                                   &trans  &trans  &trans  &trans  &trans  &trans
   &to 0    &kp B     &kp Z   &kp X   &kp C   &kp V  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp DEL  &kp BSPC  &trans  &trans          &trans  &trans  &kp RET  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans  &kp BSPC   &trans  &trans  &trans          &trans  &trans  &kp RET  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
